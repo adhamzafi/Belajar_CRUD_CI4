@@ -7,21 +7,48 @@
     <title>Edit Data Tamu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
         .container {
-            margin: 50px;
+            margin-top: 50px;
+            max-width: 600px;
+            border: 1px solid #d3d3d3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         .judul {
             text-align: center;
-        }
-
-        h1 {
-            text-align: center;
             margin-bottom: 20px;
-            background-color: black;
+            background-color: #343a40;
             color: white;
             border-radius: 10px;
-            padding: 5px;
+            padding: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            width: 100%;
+        }
+
+        .btn-primary {
+            margin-top: 10px;
+        }
+
+        .btn-secondary {
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -33,7 +60,7 @@
             <input type="hidden" class="form-control" id="id_tamu" name="id_tamu" value="<?= $data_tamu->id ?>">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Tanggal Berkunjung</label>
-                <input type="text" class="form-control" id="tgl_berkunjung" name="tgl_berkunjung" value="<?= $data_tamu->tgl_berkunjung ?>">
+                <input type="date" class="form-control" id="tgl_berkunjung" name="tgl_berkunjung" value="<?= $data_tamu->tgl_berkunjung ?>">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
@@ -41,7 +68,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">No. Telepon</label>
-                <input type="text" class="form-control" id="no_telepon" name="no_telepon" value="<?= $data_tamu->no_telepon ?>">
+                <input type="number" class="form-control" id="no_telepon" name="no_telepon" value="<?= $data_tamu->no_telepon ?>">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Alamat</label>

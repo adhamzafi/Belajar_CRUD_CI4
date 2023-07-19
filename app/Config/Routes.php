@@ -29,7 +29,8 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
+$routes->get('/', 'Tamu::index');
 $routes->get('/tamu', 'Tamu::index');
 $routes->get('/add_data_tamu', 'Tamu::add_data_tamu');
 $routes->post('/proses_add_tamu', 'Tamu::proses_add_tamu');
